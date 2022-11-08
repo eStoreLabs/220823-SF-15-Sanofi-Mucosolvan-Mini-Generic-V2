@@ -519,6 +519,10 @@ img {
   text-align: center;
   width: 90%;
 }
+.es-mucoMini .es-cross, #es-mucoMini .es-cross {
+  z-index: 0;
+  position: relative;
+}
 .es-mucoMini .es-cross__title p, #es-mucoMini .es-cross__title p {
   text-transform: uppercase;
   font-weight: 900;
@@ -544,6 +548,7 @@ img {
   min-height: 400px;
   display: flex;
   align-items: flex-end;
+  z-index: -2;
 }
 .es-mucoMini .es-cross__badge, #es-mucoMini .es-cross__badge {
   position: absolute;
@@ -588,7 +593,19 @@ img {
   background-color: #fff;
   color: #004999;
 }
+.es-mucoMini .es-cross::after, #es-mucoMini .es-cross::after {
+  content: "";
+  width: 129.5%;
+  height: 160px;
+  display: inline-block;
+  position: absolute;
+  bottom: -21px;
+  z-index: -1;
+  background-color: #1355a3;
+  left: -14.7%;
+}
 .es-mucoMini .es-footer, #es-mucoMini .es-footer {
+  background-color: #1355a3;
   padding: 40px;
 }
 .es-mucoMini .es-footer__claims, #es-mucoMini .es-footer__claims {
@@ -630,6 +647,9 @@ img {
   }
   .es-mucoMini .es-kv__text, #es-mucoMini .es-kv__text {
     font-size: 20px;
+  }
+  .es-mucoMini .es-cross::after, #es-mucoMini .es-cross::after {
+    display: none;
   }
 }
 @media (max-width: 510px) {
@@ -706,5 +726,8 @@ img {
     width: 100px;
     right: -20px;
     top: 10px;
+  }
+  .es-mucoMini .es-cross::after, #es-mucoMini .es-cross::after {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -441,6 +441,8 @@ $secondary-color: #e4022e;
             }
         }
         .es-cross{
+            z-index: 0;
+            position: relative;
             &__title{
                 p{
                     text-transform: uppercase;
@@ -468,6 +470,7 @@ $secondary-color: #e4022e;
                 min-height: 400px;
                 display: flex;
                 align-items: flex-end;
+                z-index: -2;
             }
             &__badge{
                 position: absolute;
@@ -512,8 +515,21 @@ $secondary-color: #e4022e;
                     color: $main-color;
                 }
             }
+            &::after{
+                content: '';
+                width: 129.5%;
+                height: 160px;
+                display: inline-block;
+                position: absolute;
+                bottom: -21px;
+                z-index: -1;
+                background-color: #1355a3;
+                left: -14.7%;
+               
+            }
         }
         .es-footer{
+            background-color: #1355a3;
             padding: 40px;
             &__claims{
                 text-align: justify;
@@ -559,6 +575,11 @@ $secondary-color: #e4022e;
                 }
                 &__text{
                     font-size: 20px;
+                }
+            }
+            .es-cross{
+                &::after{
+                    display: none;
                 }
             }
         }
@@ -648,6 +669,9 @@ $secondary-color: #e4022e;
                     width: 100px;
                     right: -20px;
                     top: 10px;
+                }
+                &::after{
+                    display: none;
                 }
             }
         }
